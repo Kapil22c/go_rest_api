@@ -21,6 +21,7 @@ type Product struct {
 var items []Product
 
 func homePage(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "Welcome to the HomePage!")
 	fmt.Fprintf(w, "Endpoints called : HomePage()")
 }
 
@@ -33,6 +34,7 @@ func getItems(w http.ResponseWriter, r *http.Request) {
 
 func createProduct(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-type", "application/join")
+	fmt.Println("Function called: createProduct()")
 
 	var product Product
 	_ = json.NewDecoder(r.Body).Decode(&product)
@@ -44,6 +46,7 @@ func createProduct(w http.ResponseWriter, r *http.Request) {
 
 func deleteProduct(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-type", "application/join")
+	fmt.Println("Function called: deleteProduct()")
 
 	params := mux.Vars(r)
 
@@ -64,6 +67,7 @@ func _deleteProductAtUid(uid string) {
 
 func updateProduct(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-type", "application/join")
+	fmt.Println("Function called: updateProduct()")
 
 	var product Product
 	_ = json.NewDecoder(r.Body).Decode(&product)

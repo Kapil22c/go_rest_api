@@ -76,8 +76,8 @@ func handleRequests() {
 
 func main() {
 	Articles = []Article{
-		Article{Id: "1", Title: "Health", Desc: "Health is wealth", Content: "Article Content"},
-		Article{Id: "2", Title: "Personality", Desc: "Don't judge book by it's cover", Content: "Article Content"},
+		Article{Id: "1", Title: "Technology", Desc: "Google earth", Content: "Google Earth reveals suspected nuclear weapons facility in Pakistan"},
+		Article{Id: "2", Title: "Sports", Desc: "India vs Australia", Content: "India loses series to australia, Captain kohli in question for his captaincy"},
 	}
 	handleRequests()
 }
